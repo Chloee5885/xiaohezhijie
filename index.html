@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f1e8"><meta name="description" content="小河直街数字故事卡，沿着运河读懂杭州老街的历史与日常。">
+<title>小河直街数字故事卡</title>
+<style>
+:root{--paper:#f5f1e8;--ink:#262820;--muted:#77796f;--rust:#9d563b;--line:#d9d2c5;--green:#53634f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",serif}
+header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,6vw,90px);border-bottom:1px solid var(--line);position:sticky;top:0;background:#f5f1e8ed;backdrop-filter:blur(12px);z-index:5}
+.brand{font-size:17px;letter-spacing:.16em}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.24em;color:var(--muted);margin-top:4px}
+nav{display:flex;gap:28px}nav a{font:12px Arial,sans-serif;letter-spacing:.12em;color:var(--ink);text-decoration:none}
+.hero{max-width:1320px;margin:auto;padding:50px clamp(20px,6vw,90px) 80px}
+.kicker{font:11px Arial,sans-serif;letter-spacing:.24em;color:var(--rust);text-transform:uppercase}
+.hero-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw;align-items:center;margin-top:25px}
+h1{font-size:clamp(42px,6vw,82px);font-weight:400;line-height:1.16;letter-spacing:.08em;margin:0 0 24px}
+.lead{font-size:15px;line-height:2.1;color:#62645c;max-width:390px}
+.meta{margin-top:42px;display:flex;gap:25px;color:var(--muted);font:11px Arial,sans-serif;letter-spacing:.12em}
+.cover{height:min(68vw,650px);min-height:390px;position:relative;overflow:hidden;background:#4b4a40}
+.cover img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:brightness(.78)}
+.cover:after{content:"";position:absolute;inset:0;border:1px solid #ffffff50;pointer-events:none}
+.cover-label{position:absolute;bottom:24px;left:25px;color:white;font-size:12px;letter-spacing:.2em}
+.intro{background:#e9e3d7;padding:75px clamp(20px,12vw,170px);text-align:center}
+.intro .cn{font-size:clamp(23px,3vw,34px);line-height:1.8;letter-spacing:.08em;max-width:850px;margin:20px auto}
+.intro p{font-size:13px;line-height:2.2;color:#6e6d63;max-width:700px;margin:20px auto}
+.section{max-width:1160px;margin:auto;padding:90px clamp(20px,6vw,70px)}
+.section-head{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:32px}
+h2{font-size:34px;font-weight:400;letter-spacing:.1em;margin:8px 0 0}.section-head span{font:11px Arial,sans-serif;letter-spacing:.16em;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);padding:28px 25px 25px;min-height:230px;display:flex;flex-direction:column;cursor:pointer;transition:.25s;background:#f8f5ee}
+.card:hover{transform:translateY(-5px);border-color:#a88b72;box-shadow:0 12px 30px #453b2510}
+.num{font:11px Arial,sans-serif;color:var(--rust);letter-spacing:.18em}.card h3{font-size:21px;font-weight:400;letter-spacing:.08em;margin:22px 0 10px}.card p{font-size:13px;line-height:1.9;color:var(--muted);margin:0}.more{margin-top:auto;padding-top:25px;font:11px Arial,sans-serif;letter-spacing:.15em;color:var(--rust)}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:35px}.time{border-top:1px solid var(--rust);padding:18px 16px 0 0}.time b{font-size:19px;font-weight:400}.time p{font-size:12px;line-height:1.8;color:var(--muted)}
+footer{background:#30362e;color:#eee9de;padding:55px clamp(20px,8vw,110px);display:flex;justify-content:space-between;align-items:end}.foot-title{font-size:24px;letter-spacing:.12em}.foot-sub{font:10px Arial,sans-serif;letter-spacing:.18em;color:#b8b8a9;margin-top:10px}.foot-note{font-size:11px;color:#c1c0b5}
+dialog{border:0;padding:0;max-width:620px;width:calc(100% - 32px);background:var(--paper);color:var(--ink);box-shadow:0 20px 80px #0004}dialog::backdrop{background:#171a17a8;backdrop-filter:blur(3px)}.modal{padding:38px}.modal .close{float:right;border:0;background:none;font-size:24px;cursor:pointer}.modal h2{font-size:29px;margin:22px 0}.modal p{font-size:14px;line-height:2.1;color:#62645c}
+@media(max-width:760px){header{height:62px}nav{gap:14px}nav a{font-size:10px}.hero{padding-top:34px}.hero-grid{grid-template-columns:1fr;gap:28px}.cover{height:115vw;min-height:420px;max-height:620px}.lead{max-width:none}.meta{margin-top:25px}.cards{grid-template-columns:1fr}.card{min-height:190px}.timeline{grid-template-columns:1fr 1fr;row-gap:25px}.section{padding-top:65px;padding-bottom:65px}footer{display:block}.foot-note{margin-top:25px}}
+</style>
+</head>
+<body>
+<header><div class="brand">小河直街<small>XIAOHE HISTORIC DISTRICT</small></div><nav><a href="#about">街区介绍</a><a href="#stories">数字故事</a><a href="#history">时光脉络</a></nav></header>
+<main>
+<section class="hero">
+<div class="kicker">HANGZHOU · GRAND CANAL</div>
+<div class="hero-grid"><div><h1>沿着运河<br>读懂小河</h1><div class="lead">一条老街，一段运河记忆。循着街巷的日常与旧时光，重新认识杭州小河直街的生活肌理。</div><div class="meta"><span>杭州 · 拱墅</span><span>京杭大运河畔</span></div></div>
+<div class="cover"><img src="assets/cover.jpeg" alt="小河直街街巷与灯笼"><div class="cover-label">小河直街 · 街巷日常</div></div></div>
+</section>
+<section class="intro" id="about"><div class="kicker">ABOUT THE DISTRICT</div><div class="cn">在运河的流水声里，<br>看见一座城市的旧日生活。</div><p>小河直街位于杭州京杭大运河、小河与余杭塘河交汇附近。街区因水而兴，曾是沿河商贸、仓储与居民生活交织的地方。粉墙黛瓦、沿街店铺与临水巷弄，共同留存着杭州运河沿岸的生活记忆。</p></section>
+<section class="section" id="stories"><div class="section-head"><div><div class="kicker">DIGITAL STORY CARDS</div><h2>街巷里的故事</h2></div><span>01 — 03 / EXPLORE</span></div>
+<div class="cards">
+<article class="card" data-story="canal"><div class="num">STORY 01 / 水脉</div><h3>因水而生的街巷</h3><p>从河道、埠头到沿河街市，认识小河直街与运河的关系。</p><div class="more">READ THE STORY ↗</div></article>
+<article class="card" data-story="trade"><div class="num">STORY 02 / 商贸</div><h3>运河边的烟火生意</h3><p>回望曾经的仓储、作坊与市井交易，感受街区的商业记忆。</p><div class="more">READ THE STORY ↗</div></article>
+<article class="card" data-story="life"><div class="num">STORY 03 / 日常</div><h3>老街的生活温度</h3><p>从院落、店铺到邻里日常，读懂一条街延续至今的生活气息。</p><div class="more">READ THE STORY ↗</div></article>
+</div></section>
+<section class="section" id="history"><div class="section-head"><div><div class="kicker">A BRIEF TIMELINE</div><h2>街区时光</h2></div><span>PAST & PRESENT</span></div>
+<div class="timeline"><div class="time"><b>运河兴起</b><p>水运带动沿岸聚落与商贸发展。</p></div><div class="time"><b>市井繁盛</b><p>仓储、作坊、商铺与居民生活相互交织。</p></div><div class="time"><b>街区更新</b><p>历史建筑与传统街巷逐步得到保护与修缮。</p></div><div class="time"><b>今日小河</b><p>老街延续生活气息，也成为认识运河文化的窗口。</p></div></div></section>
+</main>
+<footer><div><div class="foot-title">小河直街数字故事卡</div><div class="foot-sub">A WALK THROUGH TIME · HANGZHOU</div></div><div class="foot-note">沿着运河，遇见杭州的日常。</div></footer>
+<dialog id="story"><div class="modal"><button class="close" aria-label="关闭">×</button><div class="kicker" id="m-kicker">DIGITAL STORY</div><h2 id="m-title"></h2><p id="m-body"></p></div></dialog>
+<script>
+const data={
+canal:["STORY 01 / 水脉","因水而生的街巷","小河直街的形成与运河水系密不可分。河道不仅承担交通运输功能，也塑造了沿岸居民的生产和生活方式。船只往来、货物装卸、临河而居，让街巷与水岸形成紧密联系。今天漫步街区，仍能从河埠、桥巷和建筑布局中，读到这段因水而兴的历史。"],
+trade:["STORY 02 / 商贸","运河边的烟火生意","大运河曾是南北物资交流的重要通道。小河一带依托水运发展出仓储、作坊和沿街商业，街区空间也因此呈现出商住交融的特点。店铺面街、后院居住、临河装卸，构成了传统运河街区鲜活的生活图景。"],
+life:["STORY 03 / 日常","老街的生活温度","历史街区不只是被保存下来的建筑，更是持续发生的日常生活。巷口的招呼声、沿街的小店、邻里之间熟悉的往来，让小河直街保有真实而亲切的城市温度。新旧业态在这里相遇，也让老街的故事继续写下去。"]
+};
+const dlg=document.querySelector("#story");document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>{let d=data[c.dataset.story];document.querySelector("#m-kicker").textContent=d[0];document.querySelector("#m-title").textContent=d[1];document.querySelector("#m-body").textContent=d[2];dlg.showModal()}));document.querySelector(".close").onclick=()=>dlg.close();dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+</script>
+</body></html>
